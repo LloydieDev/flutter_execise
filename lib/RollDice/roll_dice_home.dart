@@ -46,7 +46,7 @@ class _RollDiceHomeState extends State<RollDiceHome> {
                 fixedSize: const Size(100, 50),
                 backgroundColor: Colors.pinkAccent),
             child: const Text(
-              'roll',
+              'roll dice',
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
