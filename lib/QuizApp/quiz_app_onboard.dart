@@ -18,7 +18,12 @@ class QuizAppOnBoard extends StatelessWidget {
             Center(
               child: Image.asset('lib/QuizApp/image/quiz_logo.png'),
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 50),
+            const Text(
+              'Learn Flutter the fun way',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+            const SizedBox(height: 20),
             OutlinedButton(
               onPressed: () {
                 Navigator.push(
