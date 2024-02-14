@@ -1,4 +1,4 @@
-import 'package:roll_device/QuizApp/image/questions_model.dart';
+import 'package:roll_device/QuizApp/model/questions_model.dart';
 
 const questionsData = [
   QuizQuestion(

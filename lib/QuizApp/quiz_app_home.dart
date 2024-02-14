@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:roll_device/QuizApp/Data/question_data.dart';
 
-import 'widget/answer_button.dart';
+import 'widget/answer.dart';
 
 class QuizAppHome extends StatefulWidget {
   const QuizAppHome({super.key});
@@ -12,34 +13,39 @@ class QuizAppHome extends StatefulWidget {
 class _QuizAppHomeState extends State<QuizAppHome> {
   @override
   Widget build(BuildContext context) {
+    final currentQuestion = questionsData[0];
+
     return Scaffold(
       appBar: AppBar(
         title: const Center(
             child: Text(
-          'Questions',
+          'Quiz App',
           style: TextStyle(color: Colors.white),
         )),
         backgroundColor: Colors.pinkAccent,
         automaticallyImplyLeading: false,
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: Text(
-              'The Questions..',
+              currentQuestion.text,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          AnswerButton(buttonText: 'Answer 1',),
-          AnswerButton(buttonText: 'Answer 2',),
-          AnswerButton(buttonText: 'Answer 3',),
-         
+          // map  the question 
+          //? Note : we include this map inside of the Wifget using a spread operator(...)
+          ...currentQuestion.answer.map((answer) {
+            return Answer(
+              buttonText: answer,
+              onTap: () {},
+            );
+          }),
         ],
       ),
     );
   }
 }
-
