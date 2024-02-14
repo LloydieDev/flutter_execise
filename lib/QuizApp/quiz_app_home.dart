@@ -25,26 +25,29 @@ class _QuizAppHomeState extends State<QuizAppHome> {
         backgroundColor: Colors.pinkAccent,
         automaticallyImplyLeading: false,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Text(
+      body: Container(
+        margin: const EdgeInsets.all(40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
               currentQuestion.text,
+              textAlign: TextAlign.center,
             ),
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          // map  the question 
-          //? Note : we include this map inside of the Wifget using a spread operator(...)
-          ...currentQuestion.answer.map((answer) {
-            return Answer(
-              buttonText: answer,
-              onTap: () {},
-            );
-          }),
-        ],
+            const SizedBox(
+              height: 30,
+            ),
+            // map  the question 
+            //? Note : we include this map inside of the Wifget using a spread operator(...)
+            ...currentQuestion.getShuffleAnswers().map((answer) {
+              return Answer(
+                buttonText: answer,
+                onTap: () {},
+              );
+            }),
+          ],
+        ),
       ),
     );
   }
