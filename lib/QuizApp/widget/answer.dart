@@ -18,7 +18,7 @@ class Answer extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10)
       ),
-      child: Text(buttonText),
+      child: Text(buttonText, textAlign: TextAlign.center,),
     );
   }
 }

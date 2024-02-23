@@ -5,7 +5,7 @@ class QuizQuestion {
 
  // chaining method
   List<String> getShuffleAnswers(){
-     final shuffledList =  List.of(answer);
+     final shuffledList =  List.of(answer); // making a copy of list that became a shuffle
      shuffledList.shuffle();
      return shuffledList;
   }

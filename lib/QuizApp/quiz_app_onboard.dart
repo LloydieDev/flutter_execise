@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:roll_device/QuizApp/quiz_app_home.dart';
 
 class QuizAppOnBoard extends StatelessWidget {
@@ -19,9 +20,9 @@ class QuizAppOnBoard extends StatelessWidget {
               child: Image.asset('lib/QuizApp/image/quiz_logo.png'),
             ),
             const SizedBox(height: 50),
-            const Text(
+             Text(
               'Learn Flutter the fun way',
-              style: TextStyle(color: Colors.white, fontSize: 24),
+              style: GoogleFonts.lato(color: Colors.white, fontSize: 24),
             ),
             const SizedBox(height: 20),
             OutlinedButton(
